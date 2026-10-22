@@ -1,0 +1,11 @@
+Table,Field,Definition / caution
+CampaignContacts,contact_record_id,Unique campaign contact record number (not a unique customer ID)
+CampaignContacts,subscribed,1 if term deposit subscribed; 0 otherwise
+CampaignContacts,y,Actual campaign outcome: yes/no
+CampaignContacts,duration,Observed call duration; DO NOT use in pre-call prediction
+CampaignContacts,campaign,Contacts during current campaign; do not treat as unique customers
+CampaignContacts,month,Month label without year; do not treat as chronological time series
+TestPredictions,probability,Out-of-sample estimated subscription probability
+TestPredictions,actual_subscription,Actual test label 0/1
+TestPredictions,probability_band,Score band
+ModelMetrics,Value,Metric for chosen model and split

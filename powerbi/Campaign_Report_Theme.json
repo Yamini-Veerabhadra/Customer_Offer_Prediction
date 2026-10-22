@@ -1,0 +1,14 @@
+{
+  "name": "Customer Campaign \u2014 Calm Blue",
+  "dataColors": [
+    "#2563EB",
+    "#0F766E",
+    "#E59A37",
+    "#8064A2",
+    "#D36D62",
+    "#54779B"
+  ],
+  "background": "#FFFFFF",
+  "foreground": "#202A36",
+  "tableAccent": "#2563EB"
+}

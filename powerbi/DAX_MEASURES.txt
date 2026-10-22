@@ -1,0 +1,19 @@
+-- Create these measures on table CampaignContacts via Modeling > New measure.
+Campaign Contacts = COUNTROWS(CampaignContacts)
+Subscriptions = SUM(CampaignContacts[subscribed])
+Response Rate = DIVIDE([Subscriptions], [Campaign Contacts])
+Average Age = AVERAGE(CampaignContacts[age])
+Average Contact Attempts = AVERAGE(CampaignContacts[campaign])
+Prior Campaign Contacts = CALCULATE([Campaign Contacts], CampaignContacts[previous] > 0)
+Prior Campaign Share = DIVIDE([Prior Campaign Contacts], [Campaign Contacts])
+Contacts With Housing Loan = CALCULATE([Campaign Contacts], CampaignContacts[housing] = "yes")
+
+-- Create these measures on TestPredictions. Filter by held-out period explicitly; do not mix with training contacts.
+Heldout Records = COUNTROWS(TestPredictions)
+Heldout Actual Positives = SUM(TestPredictions[actual_subscription])
+Heldout Predicted Positives = SUM(TestPredictions[predicted_positive_50pct])
+Heldout Precision = DIVIDE(CALCULATE(COUNTROWS(TestPredictions), TestPredictions[actual_subscription] = 1, TestPredictions[predicted_positive_50pct] = 1),[Heldout Predicted Positives])
+Heldout Recall = DIVIDE(CALCULATE(COUNTROWS(TestPredictions), TestPredictions[actual_subscription] = 1, TestPredictions[predicted_positive_50pct] = 1),[Heldout Actual Positives])
+
+-- On ModelMetrics, choose Split and Metric via slicers; do not SUM metric values across different types.
+Selected Metric Value = SELECTEDVALUE(ModelMetrics[Value])

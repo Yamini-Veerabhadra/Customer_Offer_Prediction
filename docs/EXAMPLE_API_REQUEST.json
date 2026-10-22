@@ -1,0 +1,17 @@
+{
+  "age": 35,
+  "job": "technician",
+  "marital": "married",
+  "education": "university.degree",
+  "default": "no",
+  "housing": "yes",
+  "loan": "no",
+  "pdays": 999,
+  "previous": 0,
+  "poutcome": "nonexistent",
+  "emp_var_rate": -1.2,
+  "cons_price_idx": 93.2,
+  "cons_conf_idx": -39.2,
+  "euribor3m": 2.1,
+  "nr_employed": 5100
+}

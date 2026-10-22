@@ -1,0 +1,13 @@
+Split,Model,Metric,Value
+Validation,random_forest,ROC-AUC,0.5913
+Validation,random_forest,PR-AUC,0.1613
+Validation,random_forest,PRECISION,0.1548
+Validation,random_forest,RECALL,0.0296
+Validation,random_forest,F1,0.0497
+Validation,random_forest,BRIER,0.1606
+Held-out Test,random_forest,ROC-AUC,0.6794
+Held-out Test,random_forest,PR-AUC,0.4895
+Held-out Test,random_forest,PRECISION,0.4748
+Held-out Test,random_forest,RECALL,0.4791
+Held-out Test,random_forest,F1,0.477
+Held-out Test,random_forest,BRIER,0.2114
