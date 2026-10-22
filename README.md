@@ -220,8 +220,8 @@ The API is not publicly deployed.
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/Customer-Offer-Prediction.git
-cd Customer-Offer-Prediction
+git clone https://github.com/Yamini-Veerabhadra/Customer_Offer_Prediction.git
+cd Customer_Offer_Prediction
 ```
 
 Replace `YOUR_USERNAME` with your GitHub username.
